@@ -44,7 +44,7 @@ class ReviewsController < ProtectedController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_review
-      @review = curent_user.reviews.find(params[:id])
+      @review = current_user.reviews.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
