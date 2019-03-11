@@ -1,9 +1,11 @@
-class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :update, :destroy]
+# frozen_string_literal: true
+
+class ReviewsController < ProtectedController
+  before_action :set_review, only: %i[show update destroy]
 
   # GET /reviews
   def index
-    @reviews = Review.all
+    @reviews = current_user.reviews.all
 
     render json: @reviews
   end
@@ -15,7 +17,7 @@ class ReviewsController < ApplicationController
 
   # POST /reviews
   def create
-    @review = Review.new(review_params)
+    @review = current_user.reviews.build(review_params)
 
     if @review.save
       render json: @review, status: :created, location: @review
@@ -39,13 +41,14 @@ class ReviewsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_review
-      @review = Review.find(params[:id])
+      @review = curent_user.reviews.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def review_params
-      params.require(:review).permit(:name, :phone, :address, :vehicle, :shovel, :payment, :respectful, :punctual, :honest, :attitude, :team_player, :trustworthy, :open_to_feedback, :communication, :comments)
+      params.require(:review).permit(:name, :phone, :address, :vehicle, :shovel, :payment, :respectful, :punctual, :honest, :attitude, :teamPlayer, :trustworthy, :openToFeedback, :communication, :comments)
     end
 end

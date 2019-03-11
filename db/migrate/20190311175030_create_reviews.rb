@@ -11,9 +11,9 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.integer :punctual
       t.integer :honest
       t.integer :attitude
-      t.integer :team_player
+      t.integer :teamPlayer
       t.integer :trustworthy
-      t.integer :open_to_feedback
+      t.integer :openToFeedback
       t.integer :communication
       t.text :comments
 

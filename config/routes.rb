@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   get 'welcome/index'
   # RESTful routes
   resources :examples, except: %i[new edit]
+  resources :users
 
   # Custom routes
+  get '/users' => 'users#index'
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
   delete '/sign-out' => 'users#signout'
