@@ -8,21 +8,14 @@ It's about time that we as humans are allowed to rate anyone and everyone.  From
 
 It works because there is a front end using React.js and a backend using Ruby on Rails w PostGRES
 
-# ToDo
-- Complete the repository Description field and Website field with a meaningful sentence description of the application and link to the live URL
-
--  Create 2 Github repos (one for your front-end and one for your back-end)
- Pin both repositories on GitHub as a Popular Repository
-
--  Deploy client application on GH pages.
--  Deploy server application on Heroku.
 # Link to other Repo
 
--
+- https://github.com/rogerdunnhawaii/360-review-client
 
 # Link to both deployed sites
 
--
+- https://secret-cove-48656.herokuapp.com/
+- https://rogerdunnhawaii.github.io/360-review-client/
 
 # Unsolved problems which will fixed later
 
