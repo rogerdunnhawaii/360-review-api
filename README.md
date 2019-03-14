@@ -19,7 +19,7 @@ It works because there is a front end using React.js and a backend using Ruby on
 
 # Unsolved problems which will fixed later
 
--
+- Google maps, facebook, email/text notification
 
 # Planning, process, problem-solving strategy
 
@@ -315,32 +315,3 @@ Content-Type: application/json; charset=utf-8
 
 {"user":{"id":1,"email":"mike@m"}}
 ```
-
-### Reset Database without dropping
-
-This is not a task developers should run often, but it is sometimes necessary.
-
-**locally**
-
-```sh
-bin/rails db:migrate VERSION=0
-bin/rails db:migrate db:seed db:examples
-```
-
-**heroku**
-
-```sh
-heroku run rails db:migrate VERSION=0
-heroku run rails db:migrate db:seed db:examples
-```
-
-## Additional Resources
-- [rails-heroku-setup-guide](https://git.generalassemb.ly/ga-wdi-boston/rails-heroku-setup-guide)
-- http://guides.rubyonrails.org/api_app.html
-- https://blog.codeship.com/building-a-json-api-with-rails-5/
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
